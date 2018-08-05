@@ -1,0 +1,29 @@
+mixin content
+  form.registration-panel(name='form_1')
+    .form-name
+      .company-name
+        svg.owork
+          use(xlink:href="#owork")
+        .developer
+          span.developer-by by
+          .developer-name
+            svg.logo
+              use(xlink:href="#logo")
+    .form-desc Sign in using email and password
+    .input-email
+      +input({type:'email', name:'email-adress', label:'Enter email'})
+      .help-email
+        | Wrong email format
+    .input-password
+      +input({type:'password', name:'password-field', label:'Enter password'})
+      .view-password
+        .visible.active
+          svg.eye
+            use(xlink:href="#visible")
+        .invisible
+          svg.eye
+            use(xlink:href="#invisible")
+    .link-forgot-password
+      a(href="#") Forgot password?
+    .sign-in.btn-submit
+      input(type='button' value='Sign In')

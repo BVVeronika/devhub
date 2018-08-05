@@ -1,0 +1,129 @@
+.registration-panel {
+  margin: 20px;
+  padding: 40px;
+  width: $panel_width;
+  min-height: $panel_height;
+  box-sizing: border-box;
+  box-shadow: $panel_shadow;
+  border-radius: $panel_radius;
+  background: $panel_bg;
+  @media (max-width: 767px) {
+    padding: 20px;
+    width: 100%;
+  }
+  .form-name {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    .company-name {
+      width: 222px;
+    }
+    .owork {
+      width: 222px;
+      height: 40px;
+    }
+    .developer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-top: 9px;
+      &-by {
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 1;
+      }
+      &-name {
+        .logo {
+          width: 70px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  .form-desc {
+    padding-top: 35px;
+    padding-bottom: 7px;
+    color: #000;
+    font-size: 22px;
+    line-height: 1.46;
+    text-align: center;
+  }
+  .link-forgot-password {
+    margin-top: 10px;
+    text-align: right;
+    a {
+      font-size: 14px;
+      line-height: 1.45;
+      text-decoration: none;
+      color: $link-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .help-email {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: $err_color;
+    &.active {
+      display: block;
+    }
+  }
+  .input-password {
+    position: relative;
+    .view-password {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+      cursor: pointer;
+      z-index: 100;
+      .eye {
+        width: 24px;
+        height: 24px;
+      }
+      .visible {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+      .invisible {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  .btn-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+    input {
+      padding-top: 9px;
+      padding-bottom: 7px;
+      width: $btn_width;
+      border-radius: $btn_radius;
+      border: none;
+      box-shadow: $btn_shadow;
+      background-color: $btn_bg;
+      color: $btn_color;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.46;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover, &:active {
+        box-shadow: $btn_shadow;
+        background: $btn_bg_hover;
+      }
+      &.disabled {
+        opacity: .5;
+      }
+    }
+  }
+}

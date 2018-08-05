@@ -1,0 +1,5 @@
+mixin input({type, name, label})
+  span.input
+    input.input-field(id=name type=type name=name required)
+    label.input-label(for=name)
+      span.input-label-content #{label}

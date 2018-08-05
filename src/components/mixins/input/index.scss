@@ -1,0 +1,63 @@
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 16px;
+  width: 100%;
+  vertical-align: top;
+  &.novalid .input-field {
+    border: $input_err_border;
+  }
+  &-field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 30px 16px 10px 16px;
+    width: 100%;
+    border:$input_border;
+    border-radius: 8px;
+    background: transparent;
+    color: $input_color;
+    font-size: 18px;
+    line-height: 1.35;
+    &:focus {
+      border: $input_active_border;
+      outline: none;
+    }
+  }
+  &-label {
+    display: inline-block;
+    position: absolute;
+    float: right;
+    padding: 0 16px;
+    color: $input_label_color;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    pointer-events: none;
+    &-content {
+      position: relative;
+      display: block;
+      padding: 20px 0;
+      width: 100%;
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+    }
+  }
+}
+
+.input-field:focus + .input-label .input-label-content,
+.input-filled .input-label-content {
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $input_active_label_color;
+  -webkit-transform: translate3d(0, -13px, 0);
+  transform: translate3d(0, -13px, 0);
+}
